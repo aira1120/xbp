@@ -2,123 +2,33 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>あいら第5回 </title>
-    <!-- ⑤スタイルシートの設定をしよう --> <link rel="stylesheet" href="./css/style.css">
-                
+    <title>プログラミングを使った目覚まし</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
     <!-- h1.htmlからある行をコピペしてくればOK -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
+<head><h1>プログラミングを使った目覚まし</h1></head>
 <body>
-   <div> <h2></h2>
-    <!DOCTYPE html>
-    <html lang="jp">
-    <head>
-        <title>第５回</title>
-        <!-- ⑤スタイルシートの設定をしよう -->
-        <!-- h1.htmlからある行をコピペしてくればOK -->
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
-        <h1>python目覚まし</h1>
-        <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-        <div>
-        この課題をやる上でまず班の人たちと何をやるかという話でいくつか案がでました。<br>
-        ウイルスや自分のサイトを見た人がわかる足跡機能など案がでましたが最終的に<br>
-        班では<strong>目覚まし</strong>を作ることになりました。<br>
-        
-        </div>
-        <code>
-            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
-            <li style="background-color:#EFF;">import pygame.mixer</li>
-            <li style="background-color:#EEF;">import schedule</li>
-            <li style="background-color:#EFF;">import time</li>
-            <li style="background-color:#EEF;"></li>
-            <li style="background-color:#EFF;"></li>
-            <li style="background-color:#EEF;">#アラーム処理</li>
-            <li style="background-color:#EFF;">def Alarm():</li>
-            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("時間です")</li>
-            <li style="background-color:#EFF;">#   print("\007")  #ビープ音</li>
-            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;Sound()</li>
-            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;exit()   #これがないと無限ループになるので注意</li>
-            <li style="background-color:#EEF;"></li>
-            <li style="background-color:#EFF;">#音再生処理</li>
-            <li style="background-color:#EEF;">def Sound():</li>
-            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.init() #初期化</li>
-            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.load('alerm1.mp3') #読み込み</li>
-            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.play(-1) #ループ再生（引数を1にすると1回のみ再生）</li>
-            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;input()</li>
-            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.stop() #終了</li>
-            <li style="background-color:#EEF;"></li>
-            <li style="background-color:#EFF;"></li>
-            <li style="background-color:#EEF;">#目覚まし設定時間取得</li>
-            <li style="background-color:#EFF;">print("目覚ましをセットする時間を指定してください")</li>
-            <li style="background-color:#EEF;">hour = input("時間（hour）：")</li>
-            <li style="background-color:#EFF;">minute = input("分（minute）：")</li>
-            <li style="background-color:#EEF;">target = f"{hour.zfill(2)}:{minute.zfill(2)}"</li>
-            <li style="background-color:#EFF;">print(target+"にアラームをセットしました")</li>
-            <li style="background-color:#EEF;"></li>
-            <li style="background-color:#EFF;">#アラーム時間設定</li>
-            <li style="background-color:#EEF;">schedule.every().day.at(target).do(Alarm)</li>
-            <li style="background-color:#EFF;"></li>
-            <li style="background-color:#EEF;">#アラーム待ち</li>
-            <li style="background-color:#EFF;">while True:</li>
-            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;schedule.run_pending()</li>
-            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)</li>
-            </ol></code>
-            
-            <div>
-            これが今回参考にしたコードになります。<br>
-            <a href="https://qiita.com/Rxxx/items/d1f7d9a08dacf693b0a9" target="_blank">参考サイト</a><br>
-            
-            <br>
-            <br>
-            自分はコロナウイルスで休んでしまっていたのでこれは班のメンバーのソースコードです
-            <br>
-            </div>
-            <cod
-                <li style="background-color:#EFF;">import pygame.mixer</li>
-                <li style="background-color:#EEF;">import schedule</li>
-                <li style="background-color:#EFF;">import time</li>
-                <li style="background-color:#EEF;"></li>
-                <li style="background-color:#EFF;"></li>
-                <li style="background-color:#EEF;">#アラーム処理</li>
-                <li style="background-color:#EFF;">def Alarm():</li>
-                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("時間です")</li>
-                <li style="background-color:#EFF;">#   print("\007")  #ビープ音</li>
-                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;Sound()</li>
-                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;exit()   #これがないと無限ループになるので注意</li>
-                <li style="background-color:#EEF;"></li>
-                <li style="background-color:#EFF;">#音再生処理</li>
-                <li style="background-color:#EEF;">def Sound():</li>
-                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.init() #初期化</li>
-                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.load('patinko.mp3') #読み込み</li>
-                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.play(-1) #ループ再生（引数を1にすると1回のみ再生）</li>
-                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;input()</li>
-                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.stop() #終了</li>
-                <li style="background-color:#EEF;"></li>
-                <li style="background-color:#EFF;"></li>
-                <li style="background-color:#EEF;">#目覚まし設定時間取得</li>
-                <li style="background-color:#EFF;">print("目覚ましをセットする時間を指定してください")</li>
-                <li style="background-color:#EEF;">hour = input("時間（hour）:")</li>
-                <li style="background-color:#EFF;">minute = input("分（minute）:")</li>
-                <li style="background-color:#EEF;">target = f"{hour.zfill(2)}:{minute.zfill(2)}"</li>
-                <li style="background-color:#EFF;">print(target+"にアラームをセットしました")</li>
-                <li style="background-color:#EEF;"></li>
-                <li style="background-color:#EFF;">#アラーム時間設定</li>
-                <li style="background-color:#EEF;">schedule.every().day.at(target).do(Alarm)</li>
-                <li style="background-color:#EFF;"></li>
-                <li style="background-color:#EEF;">#アラーム待ち</li>
-                <li style="background-color:#EFF;">while True:</li>
-                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;schedule.run_pending()</li>
-                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)</li>
-                <li style="background-color:#EEF;"></li>
-                </ol></code>
-    
-    
+<div>
+今回私たちの班は起きれない、急に眠くなる、急に目が覚めるといった「眠気」をプログラミングで解消していく。<br><br><br>
 
+↓↓今回作成したプログラミング↓↓
+<br><img src="./images/ABC.jpg"width="100%"><br><br>
 
-   </div>
+<h2>これを使うと自分の指定した動画を指定した時間に流せる。 眠くなる時間に目が覚める動画、変に目が覚める時間に眠くなる動画を流すことで「眠気」をコントロールして快適な生活を送ることができる。</h2>
 
-    
+<br><br><br><br><br>
+<h2>参考サイト(※下のURLは全て外部サイト)</h2>
+<div><ul>
+    <li><a href="https://qiita.com/Rxxx/items/d1f7d9a08dacf693b0a9" target="_blank">Python3で目覚ましを作る</a></li>
+    <li><a href="https://magazine.techacademy.jp/magazine/20872">Pythonの関数を指定時刻に実行する方法を現役エンジニアが解説【初心者向け】</a></li>
+    <li><a href="https://teratail.com/questions/358689">python,VScodeで指定された時間にyoutubeの動画を自動再生したい。</a></li>
+    <li><a href="https://qiita.com/RShirakawa/items/5dd474ce4aed141a0b56">Pythonでyoutubeを再生する</a></li>
+</ul></div>
 
+<br><br><br>
+※これは同じ班員のサカグチさんのを共有させていただいたものです。
+
+</div>
 </body>
-</html>
